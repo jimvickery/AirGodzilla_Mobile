@@ -1,5 +1,1 @@
-Code4Startup React Native Boilerplate:
-- redux
-- redux-thunk
-- redux-persist
-- react-navigation
+Code4Startup React Native Boilerplate used in AirBnB Level 3, part 2
