@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: Dimensions.get('window').width - 80,
-    height: Dimensions.get('window').height * 4/7,
+    height: Dimensions.get('window').width * 4/7,
     marginBottom: 15,
   },
   title: {
