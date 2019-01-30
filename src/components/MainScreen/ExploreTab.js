@@ -29,7 +29,7 @@ const items = [
   {id: 2, title: 'Awesome!'},
 ];
 
-class ListTab extends Component {
+class ExploreTab extends Component {
 
   constructor(props) {
     super(props);
@@ -66,4 +66,4 @@ const mapDispatchToProps = dispatch => ({
   navigate: (route) => dispatch(navigate(route)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ListTab);
+export default connect(mapStateToProps, mapDispatchToProps)(ExploreTab);

@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   },
 });
 
-class UserTab extends Component {
+class ProfileTab extends Component {
 
   state = {
     name: ''
@@ -67,4 +67,4 @@ const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserTab);
+export default connect(mapStateToProps, mapDispatchToProps)(ProfileTab);
