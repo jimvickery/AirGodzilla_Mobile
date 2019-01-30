@@ -6,6 +6,8 @@ import {
   FlatList,
   TouchableOpacity,
   Text,
+  Image,
+  Dimensions,
 } from 'react-native';
 
 import { navigate } from '../../actions/nav';
@@ -13,15 +15,24 @@ import { navigate } from '../../actions/nav';
 const styles = StyleSheet.create({
   container: {
     padding: 20,
-  },
-  text: {
-    fontSize: 16,
+    backgroundColor: 'white'
   },
   item: {
     backgroundColor: 'white',
     padding: 20,
-    marginBottom: 10,
+    marginBottom: 20,
   },
+  image: {
+    width: Dimensions.get('window').width - 80,
+    height: Dimensions.get('window').height * 4/7,
+    marginBottom: 15,
+  },
+  title: {
+    fontWeight: 'bold',
+    fontSize: 16, 
+    marginBottom: 5,
+    color: "#555"
+  }
 });
 
 const items = [
@@ -39,7 +50,7 @@ const items = [
     image: {uri: "https://cdn-images-1.medium.com/max/1600/0*lVZUpshzLYaRxIiS.jpg"},
     bedroom: 3, 
     price: 250,
-    instant: false
+    instant: true
   },
   {id: 3, 
     title: 'Paris',
@@ -72,7 +83,9 @@ class ExploreTab extends Component {
         data={this.state.items}
         renderItem={({item}) => 
           <TouchableOpacity onPress={() => this.onPress(item)} style={styles.item}>
-            <Text>{item.title}</Text>
+           <Image style={styles.image} source = {item.image} />
+           <Text style={styles.title}>{`$${item.price} ${item.instant ? '🎉' : ''} ${item.title}  `}</Text>
+           <Text>{`${item.homeType} - ${item.bedroom} bedroom(s)`}</Text>
           </TouchableOpacity>
         }
         keyExtractor={(item, index) => item.id}
