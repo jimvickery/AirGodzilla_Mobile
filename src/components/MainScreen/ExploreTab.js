@@ -41,7 +41,7 @@ const items = [
     price: 250,
     instant: false
   },
-  {id: 2, 
+  {id: 3, 
     title: 'Paris',
     homeType: "House",
     image: {uri: "https://cdn-images-1.medium.com/max/1600/0*PksNnDZuB0S3yZwd.jpg"},
