@@ -8,7 +8,7 @@ import {
   Button,
 } from 'react-native';
 
-import { login, logout } from '../actions/user';
+import { login, logout } from '../../actions/user';
 
 const styles = StyleSheet.create({
   container: {

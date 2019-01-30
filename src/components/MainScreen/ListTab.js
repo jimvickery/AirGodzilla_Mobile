@@ -8,7 +8,7 @@ import {
   Text,
 } from 'react-native';
 
-import { navigate } from '../actions/nav';
+import { navigate } from '../../actions/nav';
 
 const styles = StyleSheet.create({
   container: {
