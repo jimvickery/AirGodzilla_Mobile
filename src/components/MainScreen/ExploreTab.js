@@ -59,7 +59,7 @@ const items = [
     bedroom: 1, 
     price: 99,
     instant: true
-  }
+  },
 
 ];
 
