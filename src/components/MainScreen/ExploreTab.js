@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 
 import { navigate } from '../../actions/nav';
+import { getRooms } from '../../actions/room';
 
 const styles = StyleSheet.create({
   container: {
@@ -38,6 +39,10 @@ const styles = StyleSheet.create({
 
 
 class ExploreTab extends Component {
+
+  componentWillMount() {
+    this.props.getRooms();
+  }
 
   onPress(item) {
     this.props.navigate({ routeName: "Detail", params: { item: item } });
@@ -68,6 +73,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   navigate: (route) => dispatch(navigate(route)),
+  getRooms: () => dispatch(getRooms()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ExploreTab);
