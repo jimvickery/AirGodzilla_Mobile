@@ -14,7 +14,7 @@ export function getRooms() {
   return (dispatch) => {
     return fetch(`${HOST}/api/v1/rooms`)
     .then(response => response.json())
-    .then((json => {
+    .then(json => {
       console.log("getRooms", json);
 
       if (json.is_success) {
@@ -22,7 +22,7 @@ export function getRooms() {
       } else {
         alert(json.error);
       }
-    }))
+    })
     .catch(e => alert(e));
   }
 }
