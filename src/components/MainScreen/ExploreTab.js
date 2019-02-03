@@ -50,6 +50,8 @@ class ExploreTab extends Component {
 
   render() {
     const { rooms } = this.props;
+    console.log(this.props.rooms)
+    console.log("---------------")
     return (
       <FlatList
         style={styles.container}
