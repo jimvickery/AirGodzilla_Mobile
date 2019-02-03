@@ -8,6 +8,7 @@ export function normalizeRooms(rooms) {
       image: `${HOST}${room.image}` || '',
       homeType: room.home_type || '',
       bedRoom: room.bed_room || '',
+      price: room.price || '',
       instant: room.instant || '',
     }
   })
