@@ -1,7 +1,8 @@
-import { SET_ROOMS } from '../actions/room';
+import { SET_ROOMS, SET_ROOM } from '../actions/room';
 
 const  initialState = {
-  rooms: []
+  rooms: [],
+  room: null, 
 };
 
 export default function(state = initialState, action) {
@@ -11,5 +12,13 @@ export default function(state = initialState, action) {
       rooms: action.rooms
     }
   }
+
+  if (action.type === SET_ROOM) {
+    return {
+      ...state,
+      room: action.room
+    }
+  }
+
   return state;
 }
