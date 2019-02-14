@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   },
 });
 
-class DetailScreen extends Component {
+class RoomScreen extends Component {
   render() {
     const item = this.props.navigation.state.params.item;
     return (
@@ -37,4 +37,4 @@ const mapDispatchToProps = dispatch => ({
 
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(DetailScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(RoomScreen);
