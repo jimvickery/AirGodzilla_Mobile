@@ -15,7 +15,7 @@ export function setRooms(rooms) {
 export function setRoom(room) {
   return {
     type: SET_ROOM,
-    rooms
+    room
   }
 }
 
@@ -38,13 +38,13 @@ export function getRooms() {
 
 export function getRoom(roomId) {
   return (dispatch) => {
-    return fetch(`${HOST}/api/v1/rooms${roomId}`)
+    return fetch(`${HOST}/api/v1/rooms/${roomId}`)
     .then(response => response.json())
     .then(json => {
       console.log("Get a single room", json);
 
       if (json.is_success) {
-        dispatch(setRoom(normalizeRooms(json.room)));
+        dispatch(setRoom(normalizeRoom(json.room)));
       } else {
         alert(json.error);
       }

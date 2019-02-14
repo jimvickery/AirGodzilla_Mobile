@@ -34,17 +34,16 @@ class RoomScreen extends Component {
     const item = this.props.navigation.state.params.item;
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>{room.host.name}</Text>
+        <Text style={styles.text}>{room.host.fullname}</Text>
       </View>
     );
   }
 }
 
-const mapStateToProps = state => {
-  return ({
+const mapStateToProps = state => ({
     room: state.room.room,
   });
-};
+
 
 const mapDispatchToProps = dispatch => ({
   getRoom: (roomId) => dispatch(getRoom(roomId)),

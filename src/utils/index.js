@@ -28,7 +28,7 @@ export function normalizeRoom(room) {
     accomodate: room.accomodate || '',
     bathroom: room.bath_room || '',
     unavailableDates: room.unavailable_dates || '',
-    host: rooms.host ? {
+    host: room.host ? {
       email: room.host.email || '',
       fullname: room.host.fullname || '',
       avatar: room.host.avatar || '',
