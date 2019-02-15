@@ -57,7 +57,7 @@ class RoomScreen extends Component {
       <View style = {{padding: 30}}>
         <View style ={styles.row}>
           <Text style={{flex: 1}}>{`Hosted by ${host.fullname}`}</Text>
-          <Image source ={{url: host.index}} style={styles.avatar} />
+          <Image source ={{url: host.avatar}} style={styles.avatar} />
         </View>
       </View>
      </ScrollView>
