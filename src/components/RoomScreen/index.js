@@ -101,12 +101,20 @@ class RoomScreen extends Component {
                 <Icon name='ios-home-outline' size={40} />
                 <Text>{bathRoom} bathroom(s)</Text>
               </View>
-
             </View>
-            
 
+            <View style={styles.about}>
+               <Text style={styles.aboutText}>About This Home </Text>
+               <Text>{summary}</Text>
+            </View>
           </View>
         </ScrollView>
+
+        <VIew style={styles.bookingBar}>
+          <Text styles={{flex: 1}}>
+            <Text style={{fontWeight: 'bold'}}>{`$${price}`}</Text> per night
+          </Text>
+        </VIew>
     </View>
     );
   }
