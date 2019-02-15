@@ -50,13 +50,13 @@ const styles = StyleSheet.create({
   },
   bookingBar: {
     position: 'absolute',
-    button: 0,
+    bottom: 0,
     padding: 15,
     flexDirection: 'row',
     borderTopWidth: 1,
-    borderTopColor: 'e2e2e2',
+    borderTopColor: '#e2e2e2',
     backgroundColor: 'white',
-    alikeItems: 'center',
+    alignItems: 'center',
   },
 });
 
@@ -110,11 +110,11 @@ class RoomScreen extends Component {
           </View>
         </ScrollView>
 
-        <VIew style={styles.bookingBar}>
-          <Text styles={{flex: 1}}>
+        <View style={styles.bookingBar}>
+          <Text style={{flex: 1}}>
             <Text style={{fontWeight: 'bold'}}>{`$${price}`}</Text> per night
           </Text>
-        </VIew>
+        </View>
     </View>
     );
   }
