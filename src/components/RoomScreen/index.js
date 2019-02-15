@@ -5,19 +5,36 @@ import {
   StyleSheet,
   View,
   Text,
+  ScrollView,
+  Image,
+  Dimensions,
 } from 'react-native';
 
 import { getRoom } from '../../actions/room';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
+    backgroundColor: 'white',
+
+  },
+  image: {
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').width* 4/7,
+  },
+  row: {
+    flexDirection: 'row',
     alignItems: 'center',
+    paddingBottom: 20,
+    marginBottom: 20, 
+    borderBottomWidth: 1,
+    borderBottomColor: '#e2e2e2'
   },
-  text: {
-    fontSize: 16,
+  avatar: {
+    width: 60,
+    height: 60,
+    borderRadius: 60,
   },
+
 });
 
 class RoomScreen extends Component {
@@ -31,11 +48,19 @@ class RoomScreen extends Component {
 
     if (!room) return null;
 
+    const { image, host } = room;
+
     const item = this.props.navigation.state.params.item;
     return (
-      <View style={styles.container}>
-        <Text style={styles.text}>{room.host.fullname}</Text>
+     <ScrollView style = {styles.container}>
+      <Image source = {{uri: image}} style = {styles.image} />
+      <View style = {{padding: 30}}>
+        <View style ={styles.row}>
+          <Text style={{flex: 1}}>{`Hosted by ${host.fullname}`}</Text>
+          <Image source ={{url: host.index}} style={styles.avatar} />
+        </View>
       </View>
+     </ScrollView>
     );
   }
 }
