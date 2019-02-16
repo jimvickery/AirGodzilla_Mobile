@@ -32,7 +32,7 @@ export default class GodzillaButton extends Component {
        return {  
       <TouchableOpacity
       style = {[styles.button, {backgroundColor} ]}
-      onpress = {() => onPress() } 
+      onPress = {() => onPress() } 
       disabled = {disabled}>
       <Text style = {{style.buttonText, {color: textColor }}}>{label}</Text>
 
