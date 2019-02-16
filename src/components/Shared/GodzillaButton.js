@@ -22,7 +22,7 @@ const styles = StyleSheet.create ({
 
 export default class GodzillaButton extends Component {
   render() {
-    const { onpress,
+    const { onPress,
        label,
        backgroundColor,
        textColor, 
