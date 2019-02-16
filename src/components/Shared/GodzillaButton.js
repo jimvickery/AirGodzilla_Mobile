@@ -5,7 +5,7 @@ import {
   Text,
 } from 'react-native';
 
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
   button: {
     height: 47,
     alignItmes: 'center',
