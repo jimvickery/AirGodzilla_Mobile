@@ -10,8 +10,8 @@ import {
   Dimensions,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-
-import { getRoom } from '../../actions/room';
+import GodzillaButton from '../../actions/room'
+import { getRoom } from '../Shared/GodzillaButton';
 
 const styles = StyleSheet.create({
   container: {
@@ -114,6 +114,12 @@ class RoomScreen extends Component {
           <Text style={{flex: 1}}>
             <Text style={{fontWeight: 'bold'}}>{`$${price}`}</Text> per night
           </Text>
+          <GodzillaButton
+            onPress = { () => {alert("Check Availability")} }
+            backgroundColor= '#FF5A60'
+            textColor = 'white'
+            label = 'Check Availability'
+          />
         </View>
     </View>
     );

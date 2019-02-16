@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
-  StyleSheet,
   TouchableOpacity,
+  StyleSheet,
   Text,
 } from 'react-native';
 
@@ -22,20 +22,20 @@ const styles = StyleSheet.create({
 
 export default class GodzillaButton extends Component {
   render() {
-    const { onPress,
+    const { 
+       onPress,
        label,
        backgroundColor,
        textColor, 
-       disabled 
+       disabled
       } = this.props;
     
        return {  
-          <TouchableOpacity
+          <TouchableOpacity>
           style = {[styles.button, {backgroundColor} ]}
           onPress = { () => onPress() } 
           disabled = {disabled}>
-          <Text style = {{styles.buttonText, {color: textColor }}}>{label}</Text>
-
+          <Text style = {[styles.buttonText, {color: textColor }]}>{label} </Text>
           </TouchableOpacity>
     }
   }
