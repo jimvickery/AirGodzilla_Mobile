@@ -10,8 +10,9 @@ import {
   Dimensions,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import GodzillaButton from '../../actions/room'
-import { getRoom } from '../Shared/GodzillaButton';
+import GodzillaButton from  '../Shared/GodzillaButton';
+import { getRoom } from '../../actions/room';
+
 
 const styles = StyleSheet.create({
   container: {
