@@ -30,7 +30,7 @@ export default class GodzillaButton extends Component {
        disabled
       } = this.props;
     
-       return {  
+       return (
         <TouchableOpacity
           style = {[styles.button, {backgroundColor} ]}
           onPress = { () => onPress() } 
@@ -39,9 +39,10 @@ export default class GodzillaButton extends Component {
           <Text style = {[styles.buttonText, {color: textColor }]}>{label} </Text>
           
         </TouchableOpacity>
-        <TouchableOpacity>
-          <MyButton label="Press me!" />
-        </TouchableOpacity>
+      ) 
     }
   }
-}
+
+
+
+
