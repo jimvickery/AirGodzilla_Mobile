@@ -6,9 +6,8 @@ import {
   View,
   Text,
   TouchableOpacity,
-} from 'react-native-vector-icons/Iconicons';
-
-import Icon from 'react-native'
+} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import { login, logout } from '../../actions/user';
 
@@ -27,7 +26,7 @@ const styles = StyleSheet.create({
   },
   button: {
     height: 47,
-    alignItem: 'center',
+    alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 25, 
     flexDirection: 'row',
@@ -39,7 +38,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginRight: 15,
-  }
+  },
 });
 
 class AuthenticationScreen extends Component {
