@@ -23,13 +23,13 @@ allprojects {
     }
 
     configurations.all {
-        resolutionStrategy {
-            eachDependency { DependencyResolveDetails details ->
-            if (details.requested.group == 'com.facebook.react'  && details.requested.name == 'react-native') {
-                details.useVersion "0.44.0"
-                }
-            }
-            force 'com.facebook.android:facebook.android-sdk:4.22.1'
-        }
-    }
-}
+       resolutionStrategy {
+         eachDependency { DependencyResolveDetails details ->
+           if (details.requested.group == 'com.facebook.react' && details.requested.name == 'react-native') {
+             details.useVersion "0.36.0" // Your real React Native version here
+           }
+         }
+       }
+     }
+  }
+
