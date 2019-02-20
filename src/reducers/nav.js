@@ -6,7 +6,7 @@ const initialState = AppNavigator.router.getStateForAction(NavigationActions.res
   index: 0,
   actions: [
     NavigationActions.navigate({
-      routeName: 'Main',
+      routeName: 'Authentication',
     }),
   ],
 }));
