@@ -50,9 +50,10 @@ class AuthenticationScreen extends Component {
     
     return (
      <View style={styles.container}>
+     <Text style={styles.title}>Find Your Home at AirGodzilla</Text>
        <TouchableOpacity
         style={styles.button} onPress = { () => this.onFBAuth()}>
-       <Icon name ="logo-Facebook" size = {25} color = "##007B7F" style={styles.icon} />
+       <Icon name ="logo-facebook" size = {25} color = "#007B7F" style={styles.icon} />
        <Text style = {styles.buttonText}>Continue with Facebook</Text>
        </TouchableOpacity>
      </View>
