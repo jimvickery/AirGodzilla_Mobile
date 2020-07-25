@@ -1,0 +1,33 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Code4StartupReactNativeBoilerplate' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Code4StartupReactNativeBoilerplate
+
+  target 'Code4StartupReactNativeBoilerplate-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Code4StartupReactNativeBoilerplateTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'Code4StartupReactNativeBoilerplate-tvOS' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Code4StartupReactNativeBoilerplate-tvOS
+
+  target 'Code4StartupReactNativeBoilerplate-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
